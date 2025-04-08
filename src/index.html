@@ -1,0 +1,57 @@
+<h1>Cognito Advanced Security Data Generator</h1>
+
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter username">
+    </div>
+
+    <div class="form-group">
+        <label for="userPoolId">User Pool ID:</label>
+        <input type="text" id="userPoolId" placeholder="e.g., us-east-1_xxxxxx">
+    </div>
+
+    <div class="form-group">
+        <label for="clientId">Client ID:</label>
+        <input type="text" id="clientId" placeholder="Enter client ID">
+    </div>
+
+    <button onclick="generateEncodedData()">Generate Encoded Data</button>
+
+    <div id="output" class="output-section">
+        <strong>Encoded Data will appear here</strong>
+    </div>
+
+    <div id="editor" class="editor-section" style="display: none;">
+        <h2>Edit Decoded Data</h2>
+        <div class="editor-grid">
+            <div class="form-group">
+                <label for="userAgent">User Agent:</label>
+                <input type="text" id="userAgent">
+            </div>
+            <div class="form-group">
+                <label for="deviceId">Device ID:</label>
+                <input type="text" id="deviceId">
+            </div>
+            <div class="form-group">
+                <label for="deviceLanguage">Device Language:</label>
+                <input type="text" id="deviceLanguage">
+            </div>
+            <div class="form-group">
+                <label for="devicePlatform">Device Platform:</label>
+                <input type="text" id="devicePlatform">
+            </div>
+            <div class="form-group">
+                <label for="clientTimezone">Client Timezone:</label>
+                <input type="text" id="clientTimezone">
+            </div>
+            <div class="form-group">
+                <label for="timestamp">Timestamp:</label>
+                <input type="text" id="timestamp">
+            </div>
+        </div>
+        <button onclick="updateEncodedData()">Update Encoded Data</button>
+    </div>
+
+    <div id="updatedOutput" class="output-section" style="display: none;"></div>
+
+    <div id="copyNotification">Copied to clipboard!</div>
